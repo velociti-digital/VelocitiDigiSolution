@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity | Expert SEO Services & Digital Dominance</title>
+    <meta name="description"
+        content="Velocity SEO leverages high-performance algorithms to accelerate your search rankings. High-end SEO solutions for elite digital growth.">
+    <meta name="keywords" content="SEO, Search Engine Optimization, Digital Marketing, Velocity SEO, Growth Hacking">
+    <link rel="canonical" href="https://velocityseo.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velocityseo.com/">
+    <meta property="og:title" content="Velocity | Expert SEO Services">
+    <meta property="og:description" content="Hijack search algorithms and accelerate your digital reality.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://velocityseo.com/">
+    <meta property="twitter:title" content="Velocity | Expert SEO Services">
+    <meta property="twitter:description" content="Hijack search algorithms and accelerate your digital reality.">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #050507;
+            --surface-color: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --primary-neon: #00f0ff;
+            --secondary-neon: #7000ff;
+            --text-main: #f8f8f2;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(112, 0, 255, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.1), transparent 25%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background: rgba(5, 5, 7, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            margin: 0;
+            color: var(--primary-neon);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, var(--primary-neon), var(--secondary-neon));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carousel-section {
+            padding: 60px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 25px;
+            padding: 20px 10px 40px 10px;
+            scrollbar-width: none;
+            /* Removed scroll-behavior: smooth here to prevent conflicts with JS */
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-item {
+            scroll-snap-align: center;
+            flex: 0 0 85%;
+            max-width: 320px;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-neon);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+        }
+
+        .carousel-img {
+            width: 100%;
+            height: 200px;
+            display: block;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .carousel-item:hover .carousel-img {
+            opacity: 1;
+        }
+
+        .carousel-label {
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            margin-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--surface-color);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) inset;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: transparent;
+            color: var(--primary-neon);
+            border: 1px solid var(--primary-neon);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.1) inset;
+        }
+
+        button:hover {
+            background: var(--primary-neon);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        button:disabled {
+            border-color: #4b5563;
+            color: #4b5563;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-item {
+                flex: 0 0 calc(33.333% - 25px);
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
+            color: var(--primary-neon);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            background: rgba(0, 240, 255, 0.1);
+        }
+
+        .nav-btn.prev {
+            left: -20px;
+        }
+
+        .nav-btn.next {
+            right: -20px;
+        }
+
+        @media (max-width: 1200px) {
+            .nav-btn.prev {
+                left: 10px;
+            }
+
+            .nav-btn.next {
+                right: 10px;
+            }
+        }
+
+        /* Accessibility & Focus States */
+        :focus-visible {
+            outline: 2px solid var(--primary-neon);
+            outline-offset: 4px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Carousel Enhancements */
+        .pause-indicator {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .carousel-container:hover .pause-indicator {
+            opacity: 1;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .status-dot.active {
+            background: var(--primary-neon);
+            box-shadow: 0 0 10px var(--primary-neon);
+            transform: scale(1.3);
+        }
+
+        .pause-text {
+            font-size: 8px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .carousel-container.paused .pause-text {
+            opacity: 1;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header role="banner">
+        <div class="container">
+            <div class="logo">Velocity</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>SEO Redefined:<br><span style="color: var(--primary-neon);">Accelerate Reality</span></h1>
+            <p>We leverage high-performance search algorithms to position your business at the apex of the digital grid.
+                Explore our active operations or initiate transmission below.</p>
+        </section>
+
+        <section class="services-section container" aria-labelledby="services-title">
+            <h2 id="services-title">Service We Provide</h2>
+            <div class="carousel-container" id="carouselWrapper">
+                <button class="nav-btn prev" id="prevBtn" aria-label="Previous service">❮</button>
+                <button class="nav-btn next" id="nextBtn" aria-label="Next service">❯</button>
+                <div class="carousel" id="clientCarousel" role="listbox" aria-live="polite">
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=400&q=80"
+                            alt="Social media icons and growth graphs" class="carousel-img">
+                        <div class="carousel-label">Social Media Growth Strategy</div>
+                    </a>
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&w=400&q=80"
+                            alt="Magnifying glass over a digital interface" class="carousel-img">
+                        <div class="carousel-label">Search Engine Optimization</div>
+                    </a>
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80"
+                            alt="Analysis of digital advertising performance" class="carousel-img">
+                        <div class="carousel-label">ADs Execution strategy</div>
+                    </a>
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80"
+                            alt="Team planning a social media content calendar" class="carousel-img">
+                        <div class="carousel-label">Social Media Management</div>
+                    </a>
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&q=80"
+                            alt="Hand holding a smartphone interacting with social apps" class="carousel-img">
+                        <div class="carousel-label">Social Media Handling</div>
+                    </a>
+                    <a href="#" class="carousel-item" role="option">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+                            alt="Laptop screen showing high-end code and design" class="carousel-img">
+                        <div class="carousel-label">Website development</div>
+                    </a>
+                </div>
+                <div class="pause-indicator" aria-hidden="true">
+                    <div class="status-dot active" id="indicatorDot"></div>
+                    <div class="pause-text">System Paused</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container form-container">
+                <h2>Initiate Digital Transmission</h2>
+                <form id="callbackForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="firm">Designation/Firm (Optional)</label>
+                        <input type="text" id="firm" placeholder="Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input type="tel" id="phone" required placeholder="+XX XXX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required placeholder="operator@network.xyz">
+                    </div>
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2024 VELOCITY OPERATIONS. ALL RIGHTS RESERVED. // DATA ENCRYPTION ACTIVE.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // ==========================================
+        // 1. CAROUSEL AUTOMATION LOGIC (INFINITE + ACCESSIBILITY)
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('clientCarousel');
+            const wrapper = document.getElementById('carouselWrapper');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicator = document.getElementById('indicatorDot');
+            let autoScrollTimer;
+
+            // Clone items for seamless loop
+            const items = [...carousel.querySelectorAll('.carousel-item')];
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                // Clones should not be in tab order
+                clone.setAttribute('aria-hidden', 'true');
+                clone.setAttribute('tabindex', '-1');
+                carousel.appendChild(clone);
+            });
+
+            const getScrollAmount = () => {
+                const firstItem = carousel.querySelector('.carousel-item');
+                return firstItem.offsetWidth + 25; // width + gap
+            };
+
+            const moveNext = () => {
+                const scrollAmount = getScrollAmount();
+                const maxScroll = carousel.scrollWidth / 2;
+
+                if (carousel.scrollLeft >= maxScroll - 5) {
+                    carousel.scrollTo({ left: 0, behavior: 'auto' });
+                    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            };
+
+            const movePrev = () => {
+                const scrollAmount = getScrollAmount();
+                const maxScroll = carousel.scrollWidth / 2;
+
+                if (carousel.scrollLeft <= 5) {
+                    carousel.scrollTo({ left: maxScroll, behavior: 'auto' });
+                    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                }
+            };
+
+            const startEngine = () => {
+                clearInterval(autoScrollTimer);
+                wrapper.classList.remove('paused');
+                indicator.classList.add('active');
+                autoScrollTimer = setInterval(moveNext, 3500);
+            };
+
+            const stopEngine = () => {
+                clearInterval(autoScrollTimer);
+                wrapper.classList.add('paused');
+                indicator.classList.remove('active');
+            };
+
+            // Event Listeners
+            nextBtn.addEventListener('click', () => {
+                stopEngine();
+                moveNext();
+                startEngine();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopEngine();
+                movePrev();
+                startEngine();
+            });
+
+            // Accessibility: Pause on hover AND focus
+            wrapper.addEventListener('mouseenter', stopEngine);
+            wrapper.addEventListener('mouseleave', startEngine);
+
+            wrapper.addEventListener('focusin', stopEngine);
+            wrapper.addEventListener('focusout', startEngine);
+
+            // Handle visibility change
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) stopEngine();
+                else startEngine();
+            });
+
+            startEngine();
+        });
+
+        // ==========================================
+        // 2. SUPABASE FORM LOGIC
+        // ==========================================
+
+        // TODO: PASTE YOUR PROJECT URL AND PUBLISHABLE KEY HERE
+        const supabaseUrl = 'https://xzmtkspzhndymbyxnsbm.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6bXRrc3B6aG5keW1ieXhuc2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3NzcwNzIsImV4cCI6MjA4NzM1MzA3Mn0.SNMtn929_fp-6SY6QGM94KJJTP0aJVX3seT3hXMXwS0';
+
+        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        document.getElementById('callbackForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'TRANSMITTING...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                firm: document.getElementById('firm').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value
+            };
+
+            console.log('--- 📡 INITIATING TRANSMISSION ---');
+            console.log('Payload:', formData);
+
+            try {
+                // .select() confirms the write by returning the newly created row
+                const { data, error, status } = await supabaseClient
+                    .from('callbacks')
+                    .insert([formData])
+                    .select();
+
+                if (error) {
+                    console.group('❌ TRANSMISSION FAILED');
+                    console.error('HTTP Status:', status);
+                    console.error('Error Details:', error);
+                    console.groupEnd();
+
+                    let msg = `Transmission failed (Status ${status}): ${error.message}`;
+                    if (status === 401 || status === 403 || error.message.includes('policy')) {
+                        msg += "\n\n💡 HINT: This is likely a 'Row Level Security' (RLS) issue. Go to your Supabase Dashboard > Authentication > Policies and enable INSERT access for the 'anon' role on the 'callbacks' table.";
+                    }
+                    alert(msg);
+                } else {
+                    console.group('✅ TRANSMISSION SUCCESS');
+                    console.log('Database Confirmation:', data);
+                    console.groupEnd();
+                    alert('Transmission successful! Data has been verified in the database.');
+                    this.reset();
+                }
+            } catch (err) {
+                console.error('🛑 UNEXPECTED ERROR:', err);
+                alert('An unexpected error occurred. Please check the browser console.');
+            } finally {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
