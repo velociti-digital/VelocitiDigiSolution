@@ -475,8 +475,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <script>
         // ==========================================
         // 1. CAROUSEL AUTOMATION LOGIC (INFINITE + ACCESSIBILITY)
@@ -571,14 +569,8 @@
         });
 
         // ==========================================
-        // 2. SUPABASE FORM LOGIC
+        // 2. FORM LOGIC (GOOGLE FORMS)
         // ==========================================
-
-        // TODO: PASTE YOUR PROJECT URL AND PUBLISHABLE KEY HERE
-        const supabaseUrl = 'https://xzmtkspzhndymbyxnsbm.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6bXRrc3B6aG5keW1ieXhuc2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3NzcwNzIsImV4cCI6MjA4NzM1MzA3Mn0.SNMtn929_fp-6SY6QGM94KJJTP0aJVX3seT3hXMXwS0';
-
-        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         document.getElementById('callbackForm').addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -588,44 +580,35 @@
             submitBtn.innerText = 'TRANSMITTING...';
             submitBtn.disabled = true;
 
-            const formData = {
-                name: document.getElementById('name').value,
-                firm: document.getElementById('firm').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value
-            };
+            const formActionUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfg-SBK8L6ocySNcQP4q7QGRO4qVBSGNmgd87t-B6EI0sHL5g/formResponse';
+            
+            const formData = new URLSearchParams();
+            formData.append('entry.1983388195', document.getElementById('name').value);
+            formData.append('entry.257178132', document.getElementById('firm').value);
+            formData.append('entry.917037403', document.getElementById('phone').value);
+            formData.append('entry.377159810', document.getElementById('email').value);
 
             console.log('--- 📡 INITIATING TRANSMISSION ---');
-            console.log('Payload:', formData);
 
             try {
-                // .select() confirms the write by returning the newly created row
-                const { data, error, status } = await supabaseClient
-                    .from('callbacks')
-                    .insert([formData])
-                    .select();
+                await fetch(formActionUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: formData
+                });
 
-                if (error) {
-                    console.group('❌ TRANSMISSION FAILED');
-                    console.error('HTTP Status:', status);
-                    console.error('Error Details:', error);
-                    console.groupEnd();
+                console.group('✅ TRANSMISSION SUCCESS');
+                console.log('Data successfully sent to Google Forms.');
+                console.groupEnd();
 
-                    let msg = `Transmission failed (Status ${status}): ${error.message}`;
-                    if (status === 401 || status === 403 || error.message.includes('policy')) {
-                        msg += "\n\n💡 HINT: This is likely a 'Row Level Security' (RLS) issue. Go to your Supabase Dashboard > Authentication > Policies and enable INSERT access for the 'anon' role on the 'callbacks' table.";
-                    }
-                    alert(msg);
-                } else {
-                    console.group('✅ TRANSMISSION SUCCESS');
-                    console.log('Database Confirmation:', data);
-                    console.groupEnd();
-                    alert('Transmission successful! Data has been verified in the database.');
-                    this.reset();
-                }
+                alert('Transmission successful! We will contact you soon.');
+                this.reset();
             } catch (err) {
-                console.error('🛑 UNEXPECTED ERROR:', err);
-                alert('An unexpected error occurred. Please check the browser console.');
+                console.error('🛑 TRANSMISSION FAILED:', err);
+                alert('An error occurred during transmission. Please try again.');
             } finally {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
